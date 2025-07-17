@@ -1,12 +1,12 @@
 from collections import defaultdict
 from typing import Dict, Set
-from src.config import PRICE_TABLE, Shipment, MONTHLY_DISCOUNT_CAP, POPULAR_PAIRS_DISCOUNTS
+from shipments.config import PRICE_TABLE, Shipment, MONTHLY_DISCOUNT_CAP, POPULAR_PAIRS_DISCOUNTS
 
 class DiscountRule:
     """
     Base class for all discount and adjustment rules.
     """
-    def apply(self, shipment: 'Shipment', context: dict) -> None:
+    def apply(self, shipment: Shipment, context: dict) -> None:
         pass
 
 class CityRule(DiscountRule):

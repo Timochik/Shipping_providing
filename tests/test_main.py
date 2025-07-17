@@ -1,5 +1,5 @@
 import unittest
-from src.__main__ import process_lines
+from shipments.__main__ import process_lines
 
 
 class TestShipmentDiscounts(unittest.TestCase):

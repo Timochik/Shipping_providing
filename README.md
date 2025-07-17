@@ -56,7 +56,7 @@ This project implements a flexible shipping price and discount calculation syste
 
 From the project root, run:
 ```bash
-python -m src.__main__
+python -m shipments.__main__
 ```
 - By default, this reads from `input.txt` in the project root.
 - Output is printed to the console.
@@ -65,7 +65,7 @@ python -m src.__main__
 
 From the project root, run:
 ```bash
-python -m unittest discover
+python -m tests.test_main
 ```
 - All tests are located in the `tests/` directory.
 

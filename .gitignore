@@ -1,0 +1,9 @@
+# ignore the python-precompiled files:
+
+*.pyc
+
+
+
+# ignore the folders with python precompiled files: 
+
+__pycache__/

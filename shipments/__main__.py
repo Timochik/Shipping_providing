@@ -1,11 +1,8 @@
 import re
-from collections import defaultdict
-from typing import Optional, Tuple, Dict, List
-from src.rules import CityRule, LowestSPriceRule, MonthlyCapRule, DiscountRule, FreeLargeRule, PopularPairDiscountRule
-from src.config import PRICE_TABLE, MONTHLY_DISCOUNT_CAP, POPULAR_PAIRS_DISCOUNTS, BIG_CITIES, SMALL_CITIES, ALL_CITIES, Shipment
+from typing import Optional,  Dict, List
+from shipments.rules import CityRule, LowestSPriceRule, MonthlyCapRule, DiscountRule, FreeLargeRule, PopularPairDiscountRule
+from shipments.config import PRICE_TABLE, MONTHLY_DISCOUNT_CAP, POPULAR_PAIRS_DISCOUNTS, BIG_CITIES, SMALL_CITIES, ALL_CITIES, Shipment
 import sys
-import json
-import os
 from datetime import datetime
 
 # -----------------------------
@@ -72,7 +69,7 @@ def main() -> None:
     Main entry point: reads input file, processes lines, and prints results.
     """
     # Use command-line argument for input file, or default path
-    input_file = sys.argv[1] if len(sys.argv) > 1 else 'D:/Proga/Projects_my/Vinted_asignment/input.txt'
+    input_file = sys.argv[1] if len(sys.argv) > 1 else 'input.txt'
     try:
         with open(input_file, 'r') as f:
             lines = f.readlines()
